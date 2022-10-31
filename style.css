@@ -1,0 +1,107 @@
+*{ margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    }
+    
+    body{
+        display: flex ;
+        align-items: center;
+        justify-content: center;
+        background: #091921;
+        min-height: 100vh;
+        content: "oppo";
+        color: white;
+    }
+    .clock{
+        width:400px;
+        height: 400px;
+        display: flex ;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        border: 8px solid #091921;
+        box-shadow:0px -15px 15px rgba(255, 255, 255, 0.05) ,
+            inset 0px -15px 15px rgba(255, 255, 255, 0.05) ,
+             0px -15px 15px rgba(0, 0, 0, 0.05) ,
+            inset 0px -15px 15px rgba(0, 0, 0, 0.05) ;
+        background: url(clock.png);
+        background-size: cover;
+
+    }
+    
+    .clock:before{
+        content: "";
+        background: white;
+        height: 15px;
+        width: 15px;
+        border-radius: 50%;
+        z-index: 10000;
+
+    }
+    
+    .clock .hour , .clock .minute , .clock .second{
+    
+        position: absolute;
+    }
+    
+    .clock .hour ,.hr{
+        height: 150px;
+        width: 150px;
+    }
+    .clock .minute, .min{
+        height: 200px;
+        width: 200px;
+    }
+    .clock .second ,.sec{
+        height: 250px;
+        width: 250px;
+    }
+    .hr,.min,.sec{
+        display: flex ;
+        /*align-items: center;*/
+        justify-content: center;
+     
+        position: absolute;
+       
+    }
+    .hr:before{
+        content: "";
+        height: 75px;
+        width: 10px;
+        z-index: 10;
+        border-radius: 5px;
+        background: red;
+    }
+    .min:before{
+        content: "";
+        height: 100px;
+        width: 8px;
+        z-index: 11;
+        border-radius: 5px;
+        background: green;
+    }
+    .sec:before{
+        content: "";
+        height: 155px;
+        width: 5px;
+        z-index: 12;
+        border-radius: 5px;
+        background: white;
+    }
+#oppo{
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    z-index: 10001;
+    margin-top: 180px;
+    margin-left: 0px;
+    font-size: 11px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: rgb(46, 122, 46);
+}
+#weekday , #CDate{
+
+font-size: 10px;
+font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+color: white;
+}
